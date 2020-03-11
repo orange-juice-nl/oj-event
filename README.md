@@ -5,7 +5,7 @@ Adds `on`, `off` and `has` methods to the Window, Document and Element prototype
 
 ### import
 ```typescript
-import "oj-event";
+import "oj-event"
 ```
 
 ## on
@@ -14,20 +14,26 @@ import "oj-event";
 - this will override any previous events with the same namespace
 - **if event is an array** will recursively call on with each event
 
-`htmlElement.on("click.namespace", e => { ... });`
+```typescript
+window.on("click.namespace", e => { ... })
+```
 
 ## off
 `on(event: string | string[]): this`
 - removes the namespaced event
 - **if event is an array** will recursively call off with each event
 
-`htmlElement.off("click.namespace");`
+```typescript
+document.off("click.namespace")
+```
 
 ## has
 `on(event: string | string[]): boolean`
 - returns true if the event or all events are subscribed
 
-`htmlElement.has("click.namespace");`
+```typescript
+document.getElementById("submit").has("click.namespace")
+```
 
 ## Types
 
