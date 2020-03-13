@@ -1,12 +1,17 @@
 {
   "name": "oj-event",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://www.orange-juice.nl",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/orange-juice-nl/oj-event.git"
+    "type": "git",
+    "url": "https://github.com/orange-juice-nl/oj-event.git"
   },
-  "keywords": ["namespace","event","dom","listener"],
+  "keywords": [
+    "namespace",
+    "event",
+    "dom",
+    "listener"
+  ],
   "description": "Makes namespaced eventlisteners possible on any DOM element. (on('click.nmsp', () => {}); off('click.nmsp');",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
