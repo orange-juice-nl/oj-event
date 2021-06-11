@@ -51,7 +51,7 @@ const off = function (event: string | string[]) {
   const nsp = getNamespace(arr)
   const type = arr[0]
 
-  if (!this.namespaces[nsp] || !this.namespaces[nsp][type])
+  if (!this.namespaces || !this.namespaces[nsp] || !this.namespaces[nsp][type])
     return this
 
   try {
