@@ -1,5 +1,5 @@
 # Event
-Adds `on`, `off` and `has` methods to the Window, Document and Element prototypes.
+Adds `on`, `once`, `off` and `has` methods to the Window, Document and Element prototypes.
 
 ## Usage
 
@@ -19,20 +19,20 @@ window.on("click.namespace", e => { ... })
 ```
 
 ## off
-`on(event: string | string[]): this`
+`off(event: string | string[]): this`
 - removes the namespaced event
 - **if event is an array** will recursively call off with each event
 
 ```typescript
-document.off("click.namespace")
+window.off("click.namespace")
 ```
 
 ## has
-`on(event: string | string[]): boolean`
+`has(event: string | string[]): boolean`
 - returns true if the event or all events are subscribed
 
 ```typescript
-document.getElementById("submit").has("click.namespace")
+window.has("click.namespace")
 ```
 
 ## Types
